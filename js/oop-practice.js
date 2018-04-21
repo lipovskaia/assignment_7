@@ -59,23 +59,39 @@ for (var property in pet) {
 */
 
 // STEP 7
-function Animal(type) {
-    "use strict";
+
+/*function Animal(type) {
     this.type = type;
 }
-var myAnimal = new Animal("Cat");
+
+
 Animal.prototype.displayType = function speak(){
-    if (type == "Cat") {
-        window.console.log("The <color> cat is meowing!");
-    } if (type == "Dog") {
-        window.console.log("The <color> cdog is barking!");
+    if (this.type == "cat") {
+        window.console.log("The red " + this.type +  " is meowing!");
+    } if (this.type == "dog") {
+        window.console.log("The black " + this.type + " is barking!");
     }
 }
-
+var myAnimal = new Animal("dog");
 myAnimal.displayType();
- 
+ */
+
 
 // STEP 8
+//Now, convert all of your properties to private properties. Then, create a private method called checkType(). In this method you will check to see what the type is. If it’s dog, return dog, otherwise, return cat. Then, create a public method called speak that returns the value of the checkType() method. The console window should now display “The <animal type> has made a noise!”
+function Animal(type) {
+    var type = type;
+    var checkType = function (){
+    if (type == "cat") {
+        window.console.log(type +  " is cat");
+    } if (type == "dog") {
+        window.console.log(type +  " is dog");
+    }
+    
+}
+}
+var myAnimal = new Animal("dog");
+
 
 // STEP 9
 

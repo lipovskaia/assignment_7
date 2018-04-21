@@ -1,6 +1,17 @@
 /*eslint-env browser*/
 
-var Jukebox = function () {
+var select = document.getElementById("selectNumber"); 
+var options = ["Sahkira - album one", "Sahkira - album two", "Sahkira - album tree", "Sahkira - album four", "Sahkira - album five"]; 
+
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    
+}
+    
+/* var Jukebox = function () {
     "use strict";
     var albums = [], self;
     
@@ -52,4 +63,4 @@ album1.play();
 album2.play();
 album3.play();
 
-window.console.log("You favorite album is: " + jbox.favoriteAlbum());
+window.console.log("You favorite album is: " + jbox.favoriteAlbum()); */
